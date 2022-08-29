@@ -4,6 +4,8 @@ import '../styles/fentity.css'
 
 class Fentity extends Component {
     render() {
+        let fentity = this.props.fentities[this.props.match.params.fentities].find((f)=> { return f.name === this.props.match.params.name})
+        console.log( this.props.fentities[this.props.match.params.fentities])
         return (
             <div id="creature-container">
                 <h1>{fentity.name}</h1>
